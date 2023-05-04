@@ -15,9 +15,9 @@ int** MA_para_MI(int** MA, int n, int m)
         MI[i][j] = 0;
     }
   }
-  int k = 0;
+  int k = 0; cout << "teste" << endl;
   for(int i = 0; i < n; i++) {
-    for(int j = 0;j < n; j++) {
+    for(int j = i;j < n; j++) {
         if(MA[i][j] == 1){
             MI[k][i] = MI[k][j] = 1;
             k++;
@@ -31,6 +31,7 @@ int** MA_para_MI(int** MA, int n, int m)
 int main()
 {
   int n, m;
+  cin >> n >> m;
 
     // considerando que os índices dos vértices começam de 0 e vão até n-1
     int** MA = new int*[n];
@@ -51,7 +52,6 @@ int main()
       MA[u][v] = MA[v][u] = 1; //u - v
     }
 
-    
     int** MI = MA_para_MI(MA, n, m);
     for(int e = 0; e < m; e++)
     {
