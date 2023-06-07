@@ -14,6 +14,7 @@ void DFS(int u, vector<int>* lista_adj, bool* visitado) {
             DFS(*it, lista_adj, visitado);
         }
     }
+    
 }
 
 int main()
