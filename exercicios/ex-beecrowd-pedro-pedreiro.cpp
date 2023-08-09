@@ -51,7 +51,6 @@ int main() {
             }
         }        
 
-
         if(ok == false) {
             cout << -1 << endl;
             while(!pilha.empty()) {

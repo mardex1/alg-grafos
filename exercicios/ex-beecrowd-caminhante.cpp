@@ -5,6 +5,7 @@ int** mult_matrix(int** matrix_original,int** matrix_resultado, int k, int n) {
     int** matrix_aux = new int*[n];
     for(int i = 0; i < n; i++) {
         matrix_aux[i] = new int[n];
+        
     }
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
@@ -12,7 +13,7 @@ int** mult_matrix(int** matrix_original,int** matrix_resultado, int k, int n) {
             for(int k = 0; k < n; k++) {
                 resultado = resultado + matrix_original[i][k] * matrix_resultado[k][j];
             }
-            matrix_aux[i][j] = resultado; 
+            matrix_aux[i][j] = resultado;
         }
     }
     return matrix_aux;
